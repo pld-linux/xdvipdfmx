@@ -44,9 +44,9 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_bindir}
 install src/xdvipdfmx $RPM_BUILD_ROOT%{_bindir}
 
+%clean
+rm -rf $RPM_BUILD_ROOT
+
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/xdvipdfmx
-
-%clean
-rm -rf $RPM_BUILD_ROOT
